@@ -1,0 +1,145 @@
+.launcher {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 46px;
+  overflow: hidden;
+}
+
+.launcher-title-wrap {
+  position: relative;
+  text-align: center;
+}
+
+.launcher-title {
+  font-size: 76px;
+  margin: 0;
+  transform: rotate(-2deg);
+  position: relative;
+  z-index: 1;
+}
+
+.launcher-title .highlight {
+  background: var(--pink);
+  padding: 0 10px;
+  border-radius: 8px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.launcher-subtitle {
+  margin-top: 6px;
+  font-size: 16px;
+  color: rgba(33, 29, 26, 0.65);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.launcher-options {
+  display: flex;
+  gap: 36px;
+}
+
+.launcher-card {
+  width: 220px;
+  padding: 34px 20px 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.launcher-card:nth-child(1) {
+  transform: rotate(-3deg);
+}
+.launcher-card:nth-child(2) {
+  transform: rotate(3deg);
+}
+
+.launcher-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 7px 9px 0 var(--shadow);
+}
+
+.launcher-card .emoji {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.launcher-card .label {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.launcher-card .sub {
+  font-size: 12.5px;
+  color: rgba(33, 29, 26, 0.6);
+}
+
+.launcher-card.calendar {
+  background: var(--sky);
+}
+.launcher-card.planner {
+  background: var(--mint);
+}
+
+.deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.deco-asterisk {
+  top: 12%;
+  left: 9%;
+  width: 74px;
+  height: 74px;
+  background: var(--mint-deep);
+  border: 2.5px solid var(--ink);
+  border-radius: 10px;
+  transform: rotate(20deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  box-shadow: 4px 5px 0 var(--shadow);
+}
+
+.deco-tape {
+  top: 16%;
+  right: 14%;
+  width: 90px;
+  height: 30px;
+  background: rgba(253, 238, 164, 0.9);
+  border: 1.5px solid rgba(33, 29, 26, 0.35);
+  transform: rotate(-8deg);
+  box-shadow: 0 2px 4px rgba(33, 29, 26, 0.15);
+}
+
+.deco-heart {
+  bottom: 12%;
+  left: 12%;
+  font-size: 40px;
+  transform: rotate(-12deg);
+}
+
+.deco-star {
+  bottom: 18%;
+  right: 11%;
+  font-size: 36px;
+  transform: rotate(14deg);
+}
+
+.deco-scallop {
+  top: 8%;
+  right: 30%;
+  font-size: 22px;
+  color: var(--pink-deep);
+}

@@ -1,0 +1,66 @@
+{
+  "name": "scrap-planner",
+  "productName": "Scrap Planner",
+  "version": "1.0.0",
+  "description": "A cute scrapbook-style desktop planner with a calendar and recurring daily tasks",
+  "author": "Annie",
+  "main": "dist-electron/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && electron-builder --dir",
+    "typecheck": "tsc -b --noEmit",
+    "preview": "vite preview",
+    "electron:dev": "vite",
+    "dist:mac": "tsc -b && vite build && electron-builder --mac",
+    "dist:mac-unsigned": "tsc -b && vite build && electron-builder --mac --publish never -c.mac.identity=null"
+  },
+  "dependencies": {
+    "@fontsource/caveat": "^5.1.1",
+    "@fontsource/quicksand": "^5.1.1",
+    "date-fns": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "electron": "^32.2.1",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  },
+  "build": {
+    "appId": "com.annie.scrapplanner",
+    "productName": "Scrap Planner",
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64", "x64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["arm64", "x64"]
+        }
+      ]
+    },
+    "dmg": {
+      "title": "Scrap Planner"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 34px 28px;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.back-btn {
+  border: 2.5px solid var(--ink);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--paper);
+  font-size: 18px;
+  box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.screen-title {
+  font-size: 34px;
+  margin: 0;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
+
+.calendar-nav button {
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.calendar-grid-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(33, 29, 26, 0.55);
+}
+
+.calendar-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+
+.calendar-cell {
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--paper);
+  padding: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.calendar-cell:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.calendar-cell.other-month {
+  opacity: 0.35;
+}
+
+.calendar-cell.today {
+  background: var(--yellow);
+}
+
+.calendar-cell .day-num {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.calendar-cell .plan-dot {
+  margin-top: auto;
+  align-self: flex-start;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--pink-deep);
+}
+
+.day-plan-date {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  margin: -6px 0 14px;
+  color: rgba(33, 29, 26, 0.7);
+}

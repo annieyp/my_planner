@@ -1,0 +1,93 @@
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-row {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 9px 12px;
+}
+
+.checklist-row-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checklist-index {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 20px;
+  color: var(--pink-deep);
+}
+
+.checklist-text {
+  flex: 1;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.checklist-text.done {
+  text-decoration: line-through wavy var(--pink-deep) 2px;
+  opacity: 0.55;
+}
+
+.checklist-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checklist-mini-btn {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  opacity: 0.55;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.checklist-mini-btn:hover {
+  opacity: 1;
+  background: rgba(33, 29, 26, 0.08);
+}
+
+.checklist-move-btn {
+  border: 1.5px solid var(--ink);
+  background: var(--yellow);
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.checklist-notes {
+  margin-top: 8px;
+  margin-left: 32px;
+  width: calc(100% - 32px);
+  min-height: 54px;
+  font-size: 13.5px;
+  resize: vertical;
+  background: var(--cream);
+}
+
+.checklist-empty {
+  font-size: 14px;
+  color: rgba(33, 29, 26, 0.5);
+  padding: 10px 4px;
+  font-style: italic;
+}
+
+.add-item-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.add-item-row input {
+  flex: 1;
+}
